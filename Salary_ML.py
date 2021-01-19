@@ -91,7 +91,7 @@ def find_optimal_lm_mod(X, y, cutoffs, test_size = .30, random_state=42, plot=Tr
         plt.show()
 
     best_cutoff = max(results, key=results.get)
-
+#ja
     #reduce X matrix
     reduce_X = X.iloc[:, np.where((X.sum() > int(best_cutoff)) == True)[0]]
     num_feats.append(reduce_X.shape[1])
@@ -104,7 +104,7 @@ def find_optimal_lm_mod(X, y, cutoffs, test_size = .30, random_state=42, plot=Tr
     lm_model.fit(X_train, y_train)
 
     return r2_scores_test, r2_scores_train, lm_model, X_train, X_test, y_train, y_test
-
+abc=2
 def main():
     df = pd.read_csv('../Part1/stackoverflow/survey_results_public.csv')
     X, y = clean_data(df)
